@@ -30,36 +30,36 @@
                     have a uniform look with the other buttons in the header, we are not using
                     a checkbox anymore. -->
                         <button onclick="toggleSound()" class="dialog-button header-button"
-                            alt="{{.Translation.Get "toggle-soundeffects"}}"
-                            title="{{.Translation.Get "toggle-soundeffects"}}">
+                            alt="{{.Translation.Get 'toggle-soundeffects'}}"
+                            title="{{.Translation.Get 'toggle-soundeffects'}}">
                             <img id="sound-toggle-label" class="header-button-image" />
                         </button>
                         <button onclick="showNameChangeDialog()" class="dialog-button header-button"
-                            alt="{{.Translation.Get "change-your-name"}}"
-                            title="{{.Translation.Get "change-your-name"}}">
+                            alt="{{.Translation.Get 'change-your-name'}}"
+                            title="{{.Translation.Get 'change-your-name'}}">
                             <img src="{{.RootPath}}/resources/user.svg" class="header-button-image" />
                         </button>
                         <button onclick="toggleFullscreen()" class="dialog-button header-button"
-                            alt="{{.Translation.Get "toggle-fullscreen"}}"
-                            title="{{.Translation.Get "toggle-fullscreen"}}">
+                            alt="{{.Translation.Get 'toggle-fullscreen'}}"
+                            title="{{.Translation.Get 'toggle-fullscreen'}}">
                             <img src="{{.RootPath}}/resources/fullscreen.svg" class="header-button-image" />
                         </button>
                     </div>
                     <div id="word-container"></div>
                     <div>
                         <button id="help-button" onclick="showHelpDialog()" class="dialog-button header-button"
-                            alt="{{.Translation.Get "show-help"}}" title="{{.Translation.Get "show-help"}}">
+                            alt="{{.Translation.Get 'show-help'}}" title="{{.Translation.Get 'show-help'}}">
                             <img src="{{.RootPath}}/resources/help.svg" class="header-button-image" />
                         </button>
                         <button id="kick-button" style="display: none;" onclick="showKickDialog()"
-                            class="dialog-button header-button" alt="{{.Translation.Get "votekick-a-player"}}"
-                            title="{{.Translation.Get "votekick-a-player"}}">
+                            class="dialog-button header-button" alt="{{.Translation.Get 'votekick-a-player'}}"
+                            title="{{.Translation.Get 'votekick-a-player'}}">
                             <img src="{{.RootPath}}/resources/kick.png" class="header-button-image" />
                         </button>
                         <button id="lobby-settings-button" style="display: none;" onclick="showLobbySettingsDialog()"
                             class="dialog-button header-button"
-                            alt="{{.Translation.Get "change-lobby-settings-tooltip"}}"
-                            title="{{.Translation.Get "change-lobby-settings-tooltip"}}">
+                            alt="{{.Translation.Get 'change-lobby-settings-tooltip'}}"
+                            title="{{.Translation.Get 'change-lobby-settings-tooltip'}}">
                             <img src="{{.RootPath}}/resources/settings.svg" class="header-button-image" />
                         </button>
                     </div>
@@ -722,8 +722,8 @@
         //The drawing board has a base size. This base size results in a certain ratio
         //that the actual canvas has to be resized accordingly too. This is needed
         //since not every client has the same screensize.
-        const baseWidth = {{.DrawingBoardBaseWidth }};
-        const baseHeight = {{.DrawingBoardBaseHeight }};
+        const baseWidth = {{ .DrawingBoardBaseWidth }};
+        const baseHeight = {{ .DrawingBoardBaseHeight }};
         const boardRatio = baseWidth / baseHeight;
 
         // Moving this here to extract the context after resizing
